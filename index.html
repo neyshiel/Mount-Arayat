@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mt. Arayat National Park | Mystic Peak of Pampanga</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        forest: {
+                            50: '#f2f7f4',
+                            100: '#e0ede5',
+                            200: '#c2dbcd',
+                            300: '#98c1ac',
+                            400: '#6ba086',
+                            500: '#498368',
+                            600: '#366751',
+                            700: '#2b5241',
+                            800: '#244235',
+                            900: '#1e362c',
+                            950: '#101e18',
+                        },
+                        earth: {
+                            50: '#faf8f5',
+                            100: '#f3efe8',
+                            200: '#e6ddd0',
+                            300: '#d5c4ae',
+                            400: '#c2a687',
+                            500: '#b38d69',
+                            600: '#a57958',
+                            700: '#896148',
+                            800: '#70503e',
+                            900: '#5c4234',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-earth-50 text-forest-950 font-sans antialiased flex flex-col min-h-screen selection:bg-forest-600 selection:text-white">
+        <header class="sticky top-0 z-50 bg-forest-950/95 backdrop-blur-md text-white shadow-lg border-b border-forest-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                                <button onclick="navigateTo('home')" class="flex items-center space-x-3 text-left group focus:outline-none">
+                    <div class="w-10 h-10 rounded-xl bg-forest-600 flex items-center justify-center text-white shadow-inner group-hover:bg-forest-500 transition-colors">
+                        <i class="fa-solid fa-mountain-sun text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-xl tracking-wide block leading-none text-earth-50">MT. ARAYAT</span>
+                        <span class="text-[11px] uppercase tracking-widest text-forest-300 font-medium">Pampanga, Philippines</span>
+                    </div>
+                </button>
+                                <nav class="hidden md:flex items-center space-x-2">
+                    <button id="nav-home" onclick="navigateTo('home')" class="nav-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 bg-forest-700 text-white shadow-sm">
+                        Home
+                    </button>
+                    <button id="nav-about" onclick="navigateTo('about')" class="nav-btn px-5 py-2.5 rounded-xl text-sm font-medium text-forest-200 hover:text-white hover:bg-forest-800/70 transition-all duration-200">
+                        About & Trails
+                    </button>
+                    <button id="nav-contact" onclick="navigateTo('contact')" class="nav-btn px-5 py-2.5 rounded-xl text-sm font-medium text-forest-200 hover:text-white hover:bg-forest-800/70 transition-all duration-200">
+                        Contact & Register
+                    </button>
+                </nav>
+                                <div class="md:hidden">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu" class="p-3 rounded-xl text-forest-200 hover:text-white hover:bg-forest-800 focus:outline-none transition">
+                        <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+                <div id="mobile-menu" class="hidden md:hidden bg-forest-900 border-t border-forest-800 px-4 pt-3 pb-5 space-y-2">
+            <button id="mob-nav-home" onclick="navigateTo('home'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-xl text-base font-medium bg-forest-700 text-white">
+                <i class="fa-solid fa-house w-6"></i> Home
+            </button>
+            <button id="mob-nav-about" onclick="navigateTo('about'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-xl text-base font-medium text-forest-200 hover:bg-forest-800 hover:text-white">
+                <i class="fa-solid fa-compass w-6"></i> About & Trails
+            </button>
+            <button id="mob-nav-contact" onclick="navigateTo('contact'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-xl text-base font-medium text-forest-200 hover:bg-forest-800 hover:text-white">
+                <i class="fa-solid fa-envelope w-6"></i> Contact & Register
+            </button>
+        </div>
+    </header>
+        <main class="flex-grow">
+                <section id="page-home" class="page-section active">
+                        <div class="hero-bg relative min-h-[82vh] flex items-center justify-center text-center px-4 sm:px-6 lg:px-8 py-20">
+                <div class="max-w-4xl mx-auto">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-forest-800/80 border border-forest-600/50 text-forest-200 text-xs sm:text-sm font-medium tracking-wider uppercase mb-6 backdrop-blur-sm">
+                        <i class="fa-solid fa-location-dot text-earth-400"></i> Central Luzon
+                    </span>
+                    <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-md">
+                        Discover the <span class="text-earth-300 italic">Mount Arayat</span>
+                    </h1>
+                    <p class="text-base sm:text-xl text-forest-100 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                        Mount Arayat is an isolated, potentially active stratovolcano in the Central Luzon plains.
+                        Located within the vast agricultural lands of Pampanga, it rises to a height of 1,026 meters (3,366 ft) above sea level.
+                        Its southern half lies within the municipality of Arayat, while its northern half and summit are in Magalang.
+                        10 km (6.21 mi) to the west of Mount Arayat is Angeles City and the former Clark Air Base.
+                        The active volcano Mount Pinatubo is located 26 km (16 mi) west, while Manila is located 75 km (47 mi) to the south.
+                        Mount Arayat was officially declared a national park in 1933 and a tourist spot in 1997.
+                        The mountain is currently under an immense deforestation threat.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <button onclick="navigateTo('about')" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-forest-600 hover:bg-forest-500 text-white font-semibold shadow-lg shadow-forest-950/50 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                            <span>Explore Trails & History</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <button onclick="navigateTo('contact')" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/25 text-white font-semibold transition-all flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            <span>Plan Your Hike</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-forest-600 font-semibold text-sm uppercase tracking-widest">EXPLORE MOUNT ARAYAT</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-950 mt-2">A Timeless Peak of Wonder</h2>
+                    <p class="text-forest-700 mt-3">Uncover the natural beauty and storied past of Pampanga's iconic mountain sanctuary.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-earth-200 flex flex-col">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://i.ytimg.com/vi/hnvEcRj9RaA/maxresdefault.jpg"
+                                 onerror="this.src='https://placehold.co/800x500/2b5241/ffffff?text=Twin+Peaks+View'"
+                                 alt="Dramatic mountain ridge" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 bg-forest-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                                Kape Sinukuan
+                            </span>
+                        </div>
+                        <div class="p-7 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-forest-950 mb-2">Kape Sinukuan</h3>
+                                <p class="text-forest-700 text-sm leading-relaxed">
+                                    It's worth coming to this cafe for good fish, pasta and beef. Tasty new york cheesecakes and perfectly cooked asida can make a great impression on you. Guests visit Kape Sinukuan to order delicious iced coffee or great latte. There is a magnificent view from this place. The gracious staff works hard, stays positive and makes this place wonderful. Enjoyable service is something visitors like here. This spot offers you a great choice of dishes at affordable prices. Enjoy the peaceful ambiance here.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-earth-200 flex flex-col">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://i1.wp.com/lorismaeshielda.com/wp-content/uploads/2021/03/Dim-BaleBatu-3346.jpg?resize=1536%2C1024&ssl=1"
+                                 onerror="this.src='https://placehold.co/800x500/366751/ffffff?text=Lush+Mossy+Forest'"
+                                 alt="Lush green forest canopy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 bg-forest-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                                Bale Batu
+                            </span>
+                        </div>
+                        <div class="p-7 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-forest-950 mb-2">Bale Batu</h3>
+                                <p class="text-forest-700 text-sm leading-relaxed">
+                                    Often called the “Little Cambodia of the Philippines,” Bale Batu is a stone structure at the foot of Mt.
+                                    Arayat that looks more like a temple you’d find in Indonesia or Angkor Wat than anything Filipino.
+                                    It’s one of the most unusual things you’ll see in Pampanga. ₱50 gets you a tour of the property, and it’s genuinely the kind of place you’ll want photos of because your friends won’t believe it’s in Arayat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-earth-200 flex flex-col">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://www.laquatsa.com/wp-content/uploads/2024/04/sunflower-farm-arayat-768x480.webp"
+                                 onerror="this.src='https://placehold.co/800x500/896148/ffffff?text=Apung+Sinukuan+Folklore'"
+                                 alt="Misty mystical forest" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 bg-earth-800/90 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                                Sunflower Farm Arayat
+                            </span>
+                        </div>
+                        <div class="p-7 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-forest-950 mb-2">Sunflower Farm Arayat</h3>
+                                <p class="text-forest-700 text-sm leading-relaxed">
+                                    For ₱25 entrance, you get to walk through fields of sunflowers in full bloom and honestly, that’s one of the best photo opportunities you’ll find in Pampanga at that price. It’s a working farm, not just a photo spot, so you can actually learn a bit about how sunflowers are grown and harvested while you’re there. Best visited early morning when the flowers are facing the sun and the light is soft.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <section id="page-about" class="page-section">
+                        <div class="bg-forest-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <h1 class="font-serif text-3xl sm:text-5xl font-bold mt-2 mb-4">About Mount Arayat</h1>
+                    <p class="text-forest-200 max-w-2xl text-base sm:text-lg">
+                        Explore the natural history of Pampanga's iconic solitary volcano and compare its major hiking routes before your ascent.
+                    </p>
+                </div>
+            </div>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-16">
+                                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-6 space-y-5">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-forest-100 text-forest-800 text-xs font-bold uppercase">
+                            <i class="fa-solid fa-volcano"></i> Geological Information
+                        </div>
+                        <h2 class="font-serif text-3xl font-bold text-forest-950">Overview</h2>
+                        <p class="text-forest-800 leading-relaxed">
+                            Located between the municipalities of <strong>Arayat</strong> and <strong>Magalang</strong> in Pampanga, Mount Arayat stands alone in the middle of the Central Luzon plains. There are no recorded historical eruptions, and the volcano is classified as extinct, with its last volcanic activity dating back to the Holocene epoch.
+                        </p>
+                        <p class="text-forest-800 leading-relaxed">
+                            Its collapsed caldera on the western side forms a dramatic horseshoe ridge featuring two primary summits: the <strong>North Peak</strong> (the highest point at 1,033 meters) and the <strong>South Peak</strong>, linked by a rugged knife-edge traverse.
+                        </p>
+                        <div class="bg-earth-100 border-l-4 border-earth-600 p-5 rounded-r-2xl">
+                            <h4 class="font-bold text-earth-900 text-sm uppercase tracking-wide mb-1">Legend of Apung Sinukuan</h4>
+                            <p class="text-sm text-earth-800 italic">
+                                "Local elders teach hikers to walk with respect and leave no trace, as Apung Sinukuan protects the forest's flora and fauna, rewarding respectful travelers with clear skies and safe passage."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6">
+                        <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+                            <img src="https://www.shutterstock.com/image-photo/aerial-view-mount-arayat-pampanga-600nw-1689856519.jpg"
+                                 onerror="this.src='https://placehold.co/1000x700/2b5241/ffffff?text=Mount+Arayat+Landscape'"
+                                 alt="Scenic mountain peak overlooking plains" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                </div>
+                                <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-md border border-earth-200">
+                    <div class="text-center max-w-2xl mx-auto mb-8">
+                        <span class="text-forest-600 font-semibold text-xs uppercase tracking-widest">Interactive Route Explorer</span>
+                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-forest-950 mt-1">Compare Hiking Trails</h2>
+                        <p class="text-forest-700 text-sm mt-2">Select a trail below to view elevation gain, estimated hiking time, jump-off point, and trail highlights.</p>
+                    </div>
+                                        <div class="flex flex-wrap justify-center gap-3 mb-8" role="tablist">
+                        <button id="tab-north" onclick="selectTrail('north')" class="trail-tab px-6 py-3 rounded-xl font-semibold text-sm transition-all bg-forest-700 text-white shadow-sm">
+                            <i class="fa-solid fa-compass mr-2"></i>North Peak (Magalang Trail)
+                        </button>
+                        <button id="tab-south" onclick="selectTrail('south')" class="trail-tab px-6 py-3 rounded-xl font-semibold text-sm transition-all bg-forest-50 text-forest-800 hover:bg-forest-100">
+                            <i class="fa-solid fa-route mr-2"></i>South Peak (Arayat Trail)
+                        </button>
+                        <button id="tab-traverse" onclick="selectTrail('traverse')" class="trail-tab px-6 py-3 rounded-xl font-semibold text-sm transition-all bg-forest-50 text-forest-800 hover:bg-forest-100">
+                            <i class="fa-solid fa-person-hiking mr-2"></i>Full Twin-Peak Traverse
+                        </button>
+                    </div>
+                                        <div id="trail-display" class="bg-earth-50 rounded-2xl p-6 sm:p-8 border border-earth-200 transition-all">
+                    </div>
+                </div>
+            </div>
+        </section>
+                <section id="page-contact" class="page-section">
+                        <div class="bg-forest-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <span class="text-earth-300 font-semibold text-xs uppercase tracking-widest">Visitor Assistance & Eco-Guides</span>
+                    <h1 class="font-serif text-3xl sm:text-5xl font-bold mt-2 mb-4">Contact & Hike Inquiry</h1>
+                    <p class="text-forest-200 max-w-2xl text-base sm:text-lg">
+                        Have questions about trail conditions, local DENR registration, or accredited mountain guides? Send us a message below.
+                    </p>
+                </div>
+            </div>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                                        <div class="lg:col-span-5 space-y-6">
+                        <div class="bg-white rounded-3xl p-7 shadow-sm border border-earth-200 space-y-6">
+                            <h2 class="font-serif text-2xl font-bold text-forest-950">Visitor Information</h2>
+                            <p class="text-sm text-forest-700 leading-relaxed">
+                                All hikers are required to register at the barangay jump-off station and hire an accredited local guide for safety and environmental conservation.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-forest-100 text-forest-700 flex items-center justify-center shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-forest-950 text-sm">North Jump-Off Point</h4>
+                                        <p class="text-sm text-forest-700">Brgy. Ayala, Magalang, Pampanga</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-forest-100 text-forest-700 flex items-center justify-center shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-signs-post"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-forest-950 text-sm">South Jump-Off Point</h4>
+                                        <p class="text-sm text-forest-700">Brgy. San Juan Baño, Arayat, Pampanga</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-forest-100 text-forest-700 flex items-center justify-center shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-forest-950 text-sm">Recommended Start Time</h4>
+                                        <p class="text-sm text-forest-700">4:30 AM – 6:30 AM (Dayhikes)</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-forest-100 text-forest-700 flex items-center justify-center shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-forest-950 text-sm">Tourism Desk Email</h4>
+                                        <p class="text-sm text-forest-700">info@mtarayat-ecotourism.ph</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="bg-forest-800 text-white rounded-3xl p-7 shadow-md">
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="fa-solid fa-leaf text-earth-300 text-xl"></i>
+                                <h3 class="font-serif text-lg font-bold">Leave No Trace Policy</h3>
+                            </div>
+                            <ul class="text-sm text-forest-100 space-y-2 list-disc list-inside">
+                                <li>Pack out all trash, including organic peels.</li>
+                                <li>Stay on established trails to protect rare flora.</li>
+                                <li>Avoid loud speakers to preserve wildlife peace.</li>
+                            </ul>
+                        </div>
+                    </div>
+                                        <div class="lg:col-span-7">
+                        <div class="bg-white rounded-3xl p-7 sm:p-10 shadow-md border border-earth-200">
+                            <h2 class="font-serif text-2xl font-bold text-forest-950 mb-2">Send an Inquiry or Pre-Register</h2>
+                            <p class="text-sm text-forest-600 mb-6">Fill out the form below and our local tourism coordinator will respond with trail availability and guide details.</p>
+                                                        <div id="form-success-msg" class="hidden mb-6 p-5 rounded-2xl bg-forest-50 border border-forest-300 text-forest-900">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-forest-600 text-xl mt-0.5"></i>
+                                    <div>
+                                        <h4 class="font-bold text-base">Inquiry Received!</h4>
+                                        <p id="form-success-text" class="text-sm text-forest-700 mt-1"></p>
+                                        <button type="button" onclick="resetContactForm()" class="mt-3 text-xs font-semibold uppercase tracking-wider text-forest-700 underline hover:text-forest-950">
+                                            Send another message
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div id="form-error-msg" class="hidden mb-6 p-4 rounded-2xl bg-red-50 border border-red-200 text-red-800 text-sm flex items-center gap-3">
+                                <i class="fa-solid fa-circle-exclamation text-red-600"></i>
+                                <span id="form-error-text">Please complete all required fields properly.</span>
+                            </div>
+                            <form id="arayat-contact-form" onsubmit="handleContactSubmit(event)" class="space-y-5" novalidate>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="fullName" class="block text-sm font-semibold text-forest-900 mb-1.5">Full Name *</label>
+                                        <input type="text" id="fullName" name="fullName" required placeholder="e.g., Neyshiel Anne Pangilinan"
+                                               class="w-full px-4 py-3 rounded-xl border border-earth-300 bg-earth-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest-500 transition">
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-semibold text-forest-900 mb-1.5">Email Address *</label>
+                                        <input type="email" id="email" name="email" required placeholder="neyshiel@example.com"
+                                               class="w-full px-4 py-3 rounded-xl border border-earth-300 bg-earth-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest-500 transition">
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="trailPreference" class="block text-sm font-semibold text-forest-900 mb-1.5">Preferred Trail</label>
+                                        <select id="trailPreference" name="trailPreference"
+                                                class="w-full px-4 py-3 rounded-xl border border-earth-300 bg-earth-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest-500 transition">
+                                            <option value="North Peak (Magalang)">North Peak (Magalang Trail)</option>
+                                            <option value="South Peak (Arayat)">South Peak (Arayat Trail)</option>
+                                            <option value="Twin-Peak Traverse">Full Twin-Peak Traverse</option>
+                                            <option value="General Inquiry">General Park Visit / Picnic</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="hikeDate" class="block text-sm font-semibold text-forest-900 mb-1.5">Target Visit Date</label>
+                                        <input type="date" id="hikeDate" name="hikeDate"
+                                               class="w-full px-4 py-3 rounded-xl border border-earth-300 bg-earth-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest-500 transition">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-semibold text-forest-900 mb-1.5">Message or Group Size *</label>
+                                    <textarea id="message" name="message" rows="4" required placeholder="Tell us your group size, experience level, or any questions about Mt. Arayat..."
+                                              class="w-full px-4 py-3 rounded-xl border border-earth-300 bg-earth-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest-500 transition"></textarea>
+                                </div>
+                                <button type="submit" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-forest-700 hover:bg-forest-600 text-white font-semibold shadow-md transition-all flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span>Submit Inquiry</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+        <footer class="bg-forest-950 text-forest-300 border-t border-forest-900 py-10 px-4 sm:px-6 lg:px-8 mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-mountain-sun text-earth-400 text-xl"></i>
+                <span class="font-serif font-bold text-white tracking-wide">MT. ARAYAT NATIONAL PARK</span>
+            </div>
+            <div class="flex space-x-6 text-sm">
+                <button onclick="navigateTo('home')" class="hover:text-white transition">Home</button>
+                <button onclick="navigateTo('about')" class="hover:text-white transition">About & Trails</button>
+                <button onclick="navigateTo('contact')" class="hover:text-white transition">Contact</button>
+            </div>
+            <p class="text-xs text-forest-400 text-center md:text-right">
+                &copy; 2026 Mount Arayat Eco-Tourism Guide &bull; Pampanga, Philippines
+            </p>
+        </div>
+    </footer>
+        <script src="app.js"></script>
+</body>
+</html>
